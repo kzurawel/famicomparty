@@ -1,0 +1,9 @@
+<label for="{{ id }}" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="{{ id }}" class="margin-toggle">
+<span class="marginnote"
+>{%- if img %}
+{%- set imgpath = "book/" ~ page.slug ~ "/" ~ img.0 %}
+<img src="{{ resize_image(path=imgpath, width=250, height=400, op="fit") }}" alt="{{ img.1 }}" ><br>
+{% endif -%}
+{{ body | markdown(inline=true) | safe }}
+</span>

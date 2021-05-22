@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">{{ page.title }}</h1>
+
+<p class="chapter-links">
+{% if page.lighter %}
+  <a href="{{ page.lighter.path }}">&laquo; {{ page.lighter.title }}</a>
+{% endif %}
+{% if page.heavier %}
+  <a href="{{ page.heavier.path }}">{{ page.heavier.title }} &raquo;</a>
+{% endif %}
+</p>
+
+{% if page.toc %}
+<p class="toc">Table of Contents:</p>
+<ul class="toc">
+  {% for h2 in page.toc %}
+  {% if h2.level == 2 %}
+  <li>
+    <a href="{{h2.permalink | safe }}">{{ h2.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}
+
+<section>
+  {{ page.content | safe }}
+</section>
+
+<p class="chapter-links">
+{% if page.lighter %}
+  <a href="{{ page.lighter.path }}">&laquo; {{ page.lighter.title }}</a>
+{% endif %}
+{% if page.heavier %}
+  <a href="{{ page.heavier.path }}">{{ page.heavier.title }} &raquo;</a>
+{% endif %}
+</p>
+{% endblock content %}

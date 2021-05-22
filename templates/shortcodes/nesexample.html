@@ -1,0 +1,17 @@
+<canvas id="{{ id }}" class="nes-example" width="256" height="240"></canvas>
+<script src="/js/jsnes.min.js"></script>
+<script src="/js/jsnes_helpers.js"></script>
+<script>
+  const canvas = new Canvas(document.getElementById('{{ id }}'));
+  const nes = new jsnes.NES({
+    onFrame: (frameBuffer) => {
+      canvas.convertNESBuffer(frameBuffer);
+      canvas.writeBuffer();
+    },
+    onAudioSample: (left, right) => {
+      return;
+    }
+  });
+
+  fetchAndRunROM('{{ rom }}', nes, createFrameHandler);
+</script>
