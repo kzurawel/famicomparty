@@ -550,3 +550,15 @@ body > header .site-title a {
   width: 512px;
   height: 480px;
 }
+
+.posts-list {
+  list-style: none;
+  -webkit-padding-start: 1%;
+}
+
+.post-title:link,
+.post-title:visited {
+  color: #88030f;
+  font-weight: bold;
+  font-size: 2.4rem;
+}

@@ -1,6 +1,6 @@
 +++
 title = "NES Lightbox"
-template = "blog-page.html"
+template = "page.html"
 +++
 
 <p class="subtitle">A simple application to help with creating NES graphics</p>

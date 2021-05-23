@@ -9,6 +9,8 @@ useful as sharing the end products themselves. It has been a long, long time
 since I've done anything like that, especially on this site, so I figure now
 would be a great time to talk about what I've been up to for the last... three? four? years.
 
+<!-- more -->
+
 First off, this site itself. I've been interested in learning [Rust](https://www.rust-lang.org)
 for the last year, and in the process of learning Rust I came across [Zola](https://getzola.org).
 For all the years this site has existed, it has been hand-written HTML by me. No static site
