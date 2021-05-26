@@ -117,7 +117,7 @@ First, let's create `reset.asm`, including the `.export` directive:
   LDX #$00
   STX PPUCTRL
   STX PPUMASK
-  vblankwait:
+vblankwait:
   BIT PPUSTATUS
   BPL vblankwait
   JMP main
