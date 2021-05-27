@@ -1,5 +1,5 @@
 +++
-title = "NES Hardware"
+title = "4. NES Hardware"
 weight = 40
 +++
 

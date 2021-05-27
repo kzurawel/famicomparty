@@ -1,5 +1,5 @@
 +++
-title = "Refactoring"
+title = "8. Refactoring"
 weight = 80
 +++
 

@@ -1,5 +1,5 @@
 +++
-title = "Introducing 6502 Assembly"
+title = "5. Introducing 6502 Assembly"
 weight = 50
 +++
 

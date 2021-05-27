@@ -1,5 +1,5 @@
 +++
-title = "Getting Started"
+title = "3. Getting Started"
 weight = 30
 +++
 

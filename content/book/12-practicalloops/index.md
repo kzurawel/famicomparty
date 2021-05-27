@@ -1,5 +1,5 @@
 +++
-title = "Practical Loops"
+title = "12. Practical Loops"
 weight = 120
 +++
 

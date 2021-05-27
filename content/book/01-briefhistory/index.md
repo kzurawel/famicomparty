@@ -1,5 +1,5 @@
 +++
-title = "A Brief Introduction to the NES"
+title = "1. A Brief Introduction to the NES"
 weight = 10
 +++
 

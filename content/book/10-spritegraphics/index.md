@@ -1,5 +1,5 @@
 +++
-title = "Sprite Graphics"
+title = "10. Sprite Graphics"
 weight = 100
 +++
 

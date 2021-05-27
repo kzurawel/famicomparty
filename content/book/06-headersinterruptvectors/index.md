@@ -1,5 +1,5 @@
 +++
-title = "Headers and Interrupt Vectors"
+title = "6. Headers and Interrupt Vectors"
 weight = 60
 +++
 

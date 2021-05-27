@@ -1,5 +1,5 @@
 +++
-title = "The Picture Processing Unit (PPU)"
+title = "9. The Picture Processing Unit (PPU)"
 weight = 90
 +++
 
