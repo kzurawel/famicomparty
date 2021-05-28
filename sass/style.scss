@@ -4,26 +4,18 @@ body > header, body > footer {
   box-sizing: border-box;
 }
 
-/* Tufte CSS */
 @font-face {
-  font-family: "et-book";
-  src: url("et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff");
+  font-family: "Computer Modern Serif";
+  src: url("cmunrm.woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "et-book";
-  src: url("et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff");
+  font-family: "Computer Modern Serif";
+  src: url("cmunsl.woff");
   font-weight: normal;
   font-style: italic;
-}
-
-@font-face {
-  font-family: "et-book";
-  src: url("et-book-semi-bold-old-style-figures/et-book-semi-bold-old-style-figures.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
 }
 
 @font-face {
@@ -33,6 +25,7 @@ body > header, body > footer {
   font-style: normal;
 }
 
+/* Tufte CSS */
 html {
   font-size: 15px;
 }
@@ -41,7 +34,7 @@ body {
   background-color: #fff3dc;
   color: #111;
   margin: 0 auto;
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: "Computer Modern Serif", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 h1 {
@@ -236,6 +229,8 @@ body > header a:visited,
 body > footer a:link,
 body > footer a:visited {
   color: #bb8f3e;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -525,7 +520,8 @@ body > header .site-title a {
 }
 
 .license-text {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   line-height: 1.2;
   margin-bottom: 0;
   margin-top: 0;
@@ -574,7 +570,7 @@ body > header .site-title a {
 code[class*="language-"],
 pre.code,
 pre.code code {
-  color: #bfbfbd;
+  color: #e4e4e4;
   background: #111110;
   border: none;
   text-shadow: 0 1px rgba(128, 128, 128, 0.3);

@@ -6,7 +6,7 @@ template = "page.html"
 <p class="subtitle">A simple application to help with creating NES graphics</p>
 
 <figure>
-  <img src="neslightbox.png">
+  <img src="/neslightbox/neslightbox.png">
 </figure>
 
 ## Latest release: 1.0.0
@@ -44,7 +44,7 @@ display to highlight it (yellow border), then click the "Edit" button. This
 will bring up the tile editor view:
 
 <figure>
-  <img src="tileeditor.png">
+  <img src="neslightbox/tileeditor.png">
 </figure>
 
 The palette swatches come from whatever palette was selected in the main window
