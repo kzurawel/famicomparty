@@ -44,7 +44,7 @@ display to highlight it (yellow border), then click the "Edit" button. This
 will bring up the tile editor view:
 
 <figure>
-  <img src="neslightbox/tileeditor.png">
+  <img src="/neslightbox/tileeditor.png">
 </figure>
 
 The palette swatches come from whatever palette was selected in the main window

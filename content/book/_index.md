@@ -29,6 +29,7 @@ page_template = "book-page.html"
 - [11. More Assembly: Branching and Loops](@/book/11-branchingandloops/index.md)
 - [12. Practical Loops](@/book/12-practicalloops/index.md)
 - [13. Background Graphics](@/book/13-backgroundgraphics/index.md)
+- [14. Sprite Movement](@/book/14-spritemovement/index.md)
 
 ### Want to be notified when new chapters are published?
 

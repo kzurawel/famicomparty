@@ -7,6 +7,7 @@
   {% for page in section.pages %}
   <li>
     <a class="post-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    <br><span class="post-date">{{ page.date | date(format="%B %e, %Y") }}</span>
     {% if page.summary %}
     {{ page.summary | safe }}
     <a href="{{ page.permalink | safe }}#continue-reading">Continue reading...</a>

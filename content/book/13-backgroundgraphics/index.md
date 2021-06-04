@@ -298,6 +298,3 @@ more than one palette. You can use the `.nam`
 file provided to get your NES Lightbox environment set up quickly.
 Be sure to save your modified `.chr` file and
 to re-build all .asm files each time you make changes.
-
-Next time, we'll take a look at sprite animation and the
-debugging tools built into Nintaco.
