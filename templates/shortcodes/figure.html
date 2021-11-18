@@ -1,14 +1,16 @@
-<figure>
+<figure {% if classname %}class="{{classname}}"{% endif %}>
   {% if vid %}
   <video src="{{ vid }}" type="video/mp4" autoplay loop muted></video>
   {% endif %}
   {% if img %}
-  {%- set imgpath = "book/" ~ page.slug ~ "/" ~ img %}
-  <img src="{{ resize_image(path=imgpath, width=500, height=640, op="fit") }}">
+  {% set imgpath = "book/" ~ page.slug ~ "/" ~ img -%}
+  {% set imgurl = resize_image(path=imgpath, width=500, height=640, op="fit") -%}
+  <img src="{{ imgurl.url }}">
   {% endif %}
   {% if img2 %}
-  {%- set img2path = "book/" ~ page.slug ~ "/" ~ img2 %}
-  <img src="{{ resize_image(path=img2path, width=500, height=640, op="fit") }}">
+  {% set img2path = "book/" ~ page.slug ~ "/" ~ img2 -%}
+  {% set img2url = resize_image(path=img2path, width=500, height=640, op="fit") -%}
+  <img src="{{ img2url.url }}">
   {% endif %}
   <figcaption>{{ body | markdown(inline=true) | safe }}</figcaption>
 </figure>

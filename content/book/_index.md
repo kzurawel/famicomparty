@@ -30,6 +30,7 @@ page_template = "book-page.html"
 - [12. Practical Loops](@/book/12-practicalloops/index.md)
 - [13. Background Graphics](@/book/13-backgroundgraphics/index.md)
 - [14. Sprite Movement](@/book/14-spritemovement/index.md)
+- [15. Background Scrolling](@/book/15-scrolling/index.md)
 
 ### Want to be notified when new chapters are published?
 
