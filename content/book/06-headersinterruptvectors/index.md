@@ -14,7 +14,7 @@ At the very beginning of the test project, we see this curious bit of assembly:
 
 ```ca65, linenos
 .segment "HEADER"
-.byte "NES", 26, 2, 1, 0, 0
+.byte $4e, $45, $53, $1a, $02, $01, $00, $00
 ```
 
 `.segment`, since it begins with a period, is an assembler directive - an instruction
@@ -25,9 +25,9 @@ file.
 
 The second line uses another assembler directive that we've seen before. `.byte` tells the
 assembler to insert literal data bytes into the output, rather than trying to interpret opcodes
-from them. The string "NES" is inserted as three ASCII codepoints: `$4e`, `$45`, `$53`
-(the ASCII representations of "N", "E", and "S"). The next byte, `26`, represents the MS-DOS
-"end of file" character (often seen in hex notation as `$1a`). These four bytes
+from them. The three ASCII codepoints `$4e`, `$45`, `$53` are the string "NES"
+(the ASCII representations of "N", "E", and "S"). The next byte, `$1a`, represents the MS-DOS
+"end of file" character. These four bytes
 are a "magic number" that marks the output as an NES game.{% sidenote(id="magic-numbers") %}
 Most file types have a "magic number" at the start of the file to make it easier for an operating
 system to know what a file is with certainty. Java bytecode files begin with `$cafebabe`,

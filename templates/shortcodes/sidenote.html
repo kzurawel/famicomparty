@@ -3,7 +3,8 @@
 <span class="marginnote"
 >{%- if img %}
 {%- set imgpath = "book/" ~ page.slug ~ "/" ~ img.0 %}
-<img src="{{ resize_image(path=imgpath, width=250, height=400, op="fit") }}" alt="{{ img.1 }}" ><br>
+{%- set resize = resize_image(path=imgpath, width=250, height=400, op="fit") %}
+<img src="{{ resize.url }}" alt="{{ img.1 }}" ><br>
 {% endif -%}
 {{ body | markdown(inline=true) | safe }}
 </span>

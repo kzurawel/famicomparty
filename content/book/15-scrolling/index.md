@@ -298,7 +298,12 @@ register to load and store tile numbers, and the accumulator to
 write to PPUADDR. We need to keep that base nametable byte in the X
 register because we frequently need to load it into the accumulator
 (with `TXA`) and then add something to create the correct nametable
-tile address for each nametable.
+tile address for each nametable. See, for example, lines 19-23 above.
+This particular byte of data needs to be written to either `$2157`
+or `$2957`, depending on which nametable it is in. By using `TXA`
+followed by `ADC #$01`, we get `$21` (if the X register had `$20`)
+or `$29` (if the X register had `$28`), giving us the correct value
+for both nametables.
 
 Back in our main file, we can remove the existing "draw star
 background" code and replace it with two calls to our new subroutine:

@@ -1,5 +1,5 @@
 .segment "HEADER"
-.byte "NES", 26, 2, 1, 0, 0
+.byte $4e, $45, $53, $1a, $02, $01, $00, $00
 
 .segment "CODE"
 .proc irq_handler

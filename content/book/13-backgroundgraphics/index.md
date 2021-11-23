@@ -16,7 +16,9 @@ has two pattern tables for tiles, one for sprites and one for backgrounds.
 In the previous chapters, we added some tiles to the sprite pattern table.
 Now, we'll need to add tiles to the background table.
 
-For this chapter, I've updated the CHR file to include some pre-made
+For this chapter, I've updated
+[the CHR file](https://famicom.party/book/projects/13-backgroundgraphics/src/starfield.chr)
+to include some pre-made
 background tiles. There are tiles for numbers and letters (to allow
 us to display text to the player), solid-colored squares of each of
 the four palette colors, and a few "starfield" tiles. You can view

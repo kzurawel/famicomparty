@@ -68,7 +68,7 @@ our header content. Now would also be a good time to add some comments:
 
 ```ca65
 .segment "HEADER"
-.byte "NES", $1a ; Magic string that always begins an iNES header
+.byte $4e, $45, $53, $1a ; Magic string that always begins an iNES header
 .byte $02        ; Number of 16KB PRG-ROM banks
 .byte $01        ; Number of 8KB CHR-ROM banks
 .byte %00000001  ; Vertical mirroring, no save RAM, no mapper
@@ -250,7 +250,7 @@ the top-level `08-refactoring` directory):
 ```
 ca65 src/helloworld.asm
 ca65 src/reset.asm
-ld65 src/*.o -C nes.cfg -o helloworld.nes
+ld65 src/reset.o src/helloworld.o -C nes.cfg -o helloworld.nes
 ```
 
 To be clear, what we are doing here is first assembling each `.asm`

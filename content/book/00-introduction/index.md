@@ -51,7 +51,7 @@ That dream stuck with me, and after years of being a professional web
 developer I started learning NES development. (I got a strong nudge in the
 right direction from Nathan Altice’s excellent _I Am Error_.){% sidenote(id="i-am-error",
 img=["i-am-error.jpg", "I Am Error, front cover"]) %}
-[_I Am Error_](https://mitpress.mit.edu/books/i-am-error">).
+[_I Am Error_](https://mitpress.mit.edu/books/i-am-error).
 {% end %}
 It was hard to know where to begin. There were plenty of resources around the
 internet, but they were all incomplete or inaccurate in some way. I got started
