@@ -1,8 +1,29 @@
-<canvas id="{{ id }}" class="nes-example" width="256" height="240"></canvas>
+<canvas id="{{ id }}" class="nes-example" tabindex="-1" width="256" height="240"></canvas>
+{% if controller %}
+<div class="controller {{ id }}">
+  <div class="dpad">
+    <button class="up">Up</button>
+    <div class="horizontal">
+      <button class="left">Left</button>
+      <button class="right">Right</button>
+    </div>
+    <button class="down">Down</button>
+  </div>
+  <div class="selstart">
+    <button class="select">Select</button>
+    <button class="start">Start</button>
+  </div>
+  <div class="buttons">
+    <button class="b">B</button>
+    <button class="a">A</button>
+  </div>
+</div>
+{% endif %}
 <script src="/js/jsnes.min.js"></script>
 <script src="/js/jsnes_helpers.js"></script>
 <script>
-  const canvas = new Canvas(document.getElementById('{{ id }}'));
+  const container = document.getElementById('{{ id }}');
+  const canvas = new Canvas(container);
   const nes = new jsnes.NES({
     onFrame: (frameBuffer) => {
       canvas.convertNESBuffer(frameBuffer);
@@ -13,5 +34,36 @@
     }
   });
 
-  fetchAndRunROM('{{ rom }}', nes, createFrameHandler);
+  container.addEventListener('keydown', (event) => { keyboard(nes.buttonDown, event) });
+  container.addEventListener('keyup', (event) => { keyboard(nes.buttonUp, event) });
+
+{% if controller %}
+  const up = document.querySelector('.{{ id }} .up');
+  const down = document.querySelector('.{{ id }} .down');
+  const left = document.querySelector('.{{ id }} .left');
+  const right = document.querySelector('.{{ id }} .right');
+  const select = document.querySelector('.{{ id }} .select');
+  const start = document.querySelector('.{{ id }} .start');
+  const b = document.querySelector('.{{ id }} .b');
+  const a = document.querySelector('.{{ id }} .a');
+
+  up.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'up', event) });
+  up.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'up', event) });
+  down.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'down', event) });
+  down.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'down', event) });
+  left.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'left', event) });
+  left.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'left', event) });
+  right.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'right', event) });
+  right.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'right', event) });
+  select.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'select', event) });
+  select.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'select', event) });
+  start.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'start', event) });
+  start.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'start', event) });
+  b.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'b', event) });
+  b.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'b', event) });
+  a.addEventListener('pointerdown', (event) => { mouse(nes.buttonDown, 'a', event) });
+  a.addEventListener('pointerup', (event) => { mouse(nes.buttonUp, 'a', event) });
+{% endif %}
+
+  fetchAndRunROM('{{ rom }}', nes, createFrameHandler(nes));
 </script>

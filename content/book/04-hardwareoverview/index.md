@@ -14,8 +14,9 @@ see something like this:
 An NTSC (US/Japan) NES motherboard. Photo by Evan Amos.
 {% end %}
 
-Visually, the NES motherboard is dominated by the cartridge connector at the top
-and two large chips. On the left side is this chip, labelled "RP2A03":
+Visually, the NES motherboard is dominated by the (unused) expansion slot
+at the top and two large chips. On the left side is this chip,
+labelled "RP2A03":
 
 {% figure(img="2a03.jpg") %}
 The Ricoh 2A03 CPU/APU.

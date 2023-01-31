@@ -4,11 +4,11 @@
 <h1 class="title">{{ page.title }}</h1>
 
 <p class="chapter-links">
-{% if page.lighter %}
-  <a href="{{ page.lighter.path }}">&laquo; {{ page.lighter.title }}</a>
+{% if page.lower %}
+  <a href="{{ page.lower.path }}">&laquo; {{ page.lower.title }}</a>
 {% endif %}
-{% if page.heavier %}
-  <a href="{{ page.heavier.path }}">{{ page.heavier.title }} &raquo;</a>
+{% if page.higher %}
+  <a href="{{ page.higher.path }}">{{ page.higher.title }} &raquo;</a>
 {% endif %}
 </p>
 
@@ -30,11 +30,11 @@
 </section>
 
 <p class="chapter-links">
-{% if page.lighter %}
-  <a href="{{ page.lighter.path }}">&laquo; {{ page.lighter.title }}</a>
+{% if page.lower %}
+  <a href="{{ page.lower.path }}">&laquo; {{ page.lower.title }}</a>
 {% endif %}
-{% if page.heavier %}
-  <a href="{{ page.heavier.path }}">{{ page.heavier.title }} &raquo;</a>
+{% if page.higher %}
+  <a href="{{ page.higher.path }}">{{ page.higher.title }} &raquo;</a>
 {% endif %}
 </p>
 {% endblock content %}

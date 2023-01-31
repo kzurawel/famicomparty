@@ -32,6 +32,10 @@ page_template = "book-page.html"
 - [14. Sprite Movement](@/book/14-spritemovement/index.md)
 - [15. Background Scrolling](@/book/15-scrolling/index.md)
 
+### Part III: Gameplay
+
+- [16. Controller Input](@/book/16-input/index.md)
+
 ### Want to be notified when new chapters are published?
 
 Join my newsletter to receive occasional notifications of new chapters or

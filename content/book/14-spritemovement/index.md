@@ -367,7 +367,13 @@ of the player's ship. In our reset handler, we positioned
 the top left corner of the top left player ship tile at
 (`$70`, `$a0`). Once we have placed the top left tile,
 we can add eight pixels to `player_x` and `player_y` to
-find the positions of the other three tiles. Here's what that
+find the positions of the other three tiles.
+
+In the past, we have used `INC` / `DEC` to add or subtract.
+When adding or subtracting more than 1, however, there
+are more efficient opcodes. `ADC` ("ADd with Carry")
+
+Here's what that
 looks like (previous code reduced to just comments):
 
 ```ca65
