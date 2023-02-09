@@ -107,9 +107,9 @@ If you use a hash sign (#) followed by an 8-bit value (two hex digits), it will 
 exact value you used. Here is an example:
 
 ```ca65
-LDA $3f00  ; load contents of memory address $3f00
-           ; into the accumulator
-LDA #$3f   ; load the value $3f into the accumulator
+  LDA $3f00  ; load contents of memory address $3f00
+             ; into the accumulator
+  LDA #$3f   ; load the value $3f into the accumulator
 ```
 
 These different operand formats are called _addressing modes_. The 6502 can use
@@ -152,9 +152,9 @@ Now that you've learned your first ten opcodes (and two addressing modes), let's
 example that makes use of them.
 
 ```ca65
-LDA #$a7
-TAY
-STY $3f00
+  LDA #$a7
+  TAY
+  STY $3f00
 ```
 
 What does this code do? Let's take it line-by-line:
@@ -224,10 +224,10 @@ bytes of data to `$2006` - first the "high" (left) byte, followed by the "low" (
 our test project does that:
 
 ```ca65, linenos, linenostart=27
-LDX #$3f
-STX $2006
-LDX #$00
-STX $2006
+  LDX #$3f
+  STX $2006
+  LDX #$00
+  STX $2006
 ```
 
 This code first stores the byte `$3f` to `$2006`, then the byte `$00`
@@ -237,8 +237,8 @@ to `$2006` - in other words, it sets the address for any following writes to PPU
 To store data at the selected PPU memory address, store a byte to `$2007`:
 
 ```ca65, linenos, linenostart=31
-LDA #$29
-STA $2007
+  LDA #$29
+  STA $2007
 ```
 
 This writes the byte `$29` (which represents "green") to the memory address we selected
@@ -266,13 +266,13 @@ very useful to you in future chapters.
 {% end %}
 
 ```ca65, linenos, linenostart=26
-LDX $2002
-LDX #$3f
-STX $2006
-LDX #$00
-STX $2006
-LDA #$29
-STA $2007
+  LDX $2002
+  LDX #$3f
+  STX $2006
+  LDX #$00
+  STX $2006
+  LDA #$29
+  STA $2007
 ```
 
 ### `$2001`: PPUMASK
@@ -312,8 +312,8 @@ Let's look again at our test project's code. What value does our test project wr
 to PPUMASK?
 
 ```ca65, linenos, linenostart=33
-LDA #%00011110
-STA $2001
+  LDA #%00011110
+  STA $2001
 ```
 
 Here is what options we are setting, bit-by-bit:

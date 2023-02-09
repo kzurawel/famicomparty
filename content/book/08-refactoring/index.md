@@ -188,7 +188,7 @@ with only the segments and features that we need.
 Our custom linker config will be in a file called `nes.cfg`, which
 will look like this:
 
-```ca65
+```txt
 MEMORY {
   HEADER: start=$00, size=$10, fill=yes, fillval=$00;
   ZEROPAGE: start=$10, size=$ff;
@@ -232,7 +232,7 @@ all of the `.asm` and `.inc` files into a sub-directory,
 `src`, with our new linker config at the top level. The code
 we have after all of our refactoring should now look like this:
 
-```
+```txt
 08-refactoring
    |
    |-- nes.cfg
@@ -247,7 +247,7 @@ we have after all of our refactoring should now look like this:
 To assemble and link our code, we will use the following commands (run from
 the top-level `08-refactoring` directory):
 
-```
+```txt
 ca65 src/helloworld.asm
 ca65 src/reset.asm
 ld65 src/reset.o src/helloworld.o -C nes.cfg -o helloworld.nes

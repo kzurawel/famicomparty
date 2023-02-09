@@ -381,15 +381,15 @@ and copy it to the PPU using DMA transfer (in our NMI handler). Let's continue
 modifying `.proc main` to copy sprite data into `$0200-$02ff`:
 
 ```ca65, linenos, linenostart=36
-; write sprite data
-LDA #$70
-STA $0200 ; Y-coord of first sprite
-LDA #$05
-STA $0201 ; tile number of first sprite
-LDA #$00
-STA $0202 ; attributes of first sprite
-LDA #$80
-STA $0203 ; X-coord of first sprite
+  ; write sprite data
+  LDA #$70
+  STA $0200 ; Y-coord of first sprite
+  LDA #$05
+  STA $0201 ; tile number of first sprite
+  LDA #$00
+  STA $0202 ; attributes of first sprite
+  LDA #$80
+  STA $0203 ; X-coord of first sprite
 ```
 
 Finally, we need to make one more change to `.proc main`. In our

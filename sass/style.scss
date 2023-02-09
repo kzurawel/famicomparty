@@ -349,8 +349,8 @@ pre {
     font-size: 1.1rem;
 
     tr td:first-child {
-      color: #797979;
-      border-right: 1px solid #797979;
+      color: #848188;
+      border-right: 1px solid #848188;
       padding-right: 1em;
     }
 
@@ -398,6 +398,19 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 @media screen and (max-width: 760px) {
+  .header-wrapper {
+    display: block !important;
+  }
+
+  .site-title {
+    display: block !important;
+    width: 100%;
+  }
+
+  .header-links ul {
+    padding: 0;
+  }
+
   article, .wrapper {
     width: 84%;
     padding-left: 8%;
@@ -466,6 +479,40 @@ label.margin-toggle:not(.sidenote-number) {
 
   img {
     width: 100%;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  .chapter-links {
+    width: 100% !important;
+  }
+
+  .chapter-links a {
+    background: none;
+    text-decoration: none;
+  }
+
+  .nes-example {
+    width: 256px !important;
+    height: 240px !important;
+  }
+
+  .controller {
+    width: 100% !important;
+  }
+
+  .controller .dpad {
+    width: 44% !important;
+  }
+
+  .controller .dpad button {
+    width: 42% !important;
+  }
+
+  .controller .selstart {
+    margin: 0 0.5rem !important;
   }
 }
 
@@ -632,8 +679,7 @@ body > header .site-title a {
 code[class*="language-"],
 pre.code,
 pre.code code {
-  color: #e4e4e4;
-  background: #272822;
+  color: #fff3dc;
   border: none;
   text-shadow: 0 1px rgba(128, 128, 128, 0.3);
   font-family: "Victor Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -658,6 +704,19 @@ pre.code code span.comment {
   font-style: italic;
 }
 
+/**************
+COLORSCHEME VARIABLES
+**************/
+$background: #111;
+$constant: #bb8f3e;
+$directive: #bf5d5b;
+$opcode: #e30b20;
+$string: #bb8f3e;
+$numeric: #fff3dc;
+$label: #1cb87a;
+$comment: #7f6eb9;
+$register: #1973c4;
+
 /* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
@@ -668,7 +727,41 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #272822;
+  background: $background;
+  color: #0f0;
+}
+
+.language-ca65 .z-constant {
+  color: $constant;
+}
+
+.language-ca65 .z-directive {
+  color: $directive;
+}
+
+.language-ca65 .z-opcode {
+  color: $opcode;
+}
+
+.language-ca65 .z-string {
+  color: $string;
+}
+
+.language-ca65 .z-numeric {
+  color: $numeric;
+}
+
+.language-ca65 .z-label {
+  color: $label;
+}
+
+.language-ca65 .z-comment {
+  color: $comment;
+  font-style: italic;
+}
+
+.language-ca65 .z-register {
+  color: $register;
 }
 
 /* Inline code */
@@ -678,112 +771,12 @@ pre[class*="language-"] {
   white-space: normal;
 }
 
-.z-ca65 .z-comment,
-.language-ca65 .z-comment {
-  color: #c69cfe;
-}
-
-.z-ca65 .z-prolog,
-.z-ca65 .z-doctype,
-.z-ca65 .z-cdata,
-.language-ca65 .z-prolog,
-.language-ca65 .z-doctype,
-.language-ca65 .z-cdata {
-  color: slategray;
-}
-
-.z-ca65 .z-punctuation,
-.language-ca65 .z-punctuation {
-  color: #f8f8f2;
-}
-
-.z-ca65 .z-namespace,
-.language-ca65 .z-namespace {
-  opacity: .7;
-}
-
-.z-ca65 .z-property,
-.z-ca65 .z-tag,
-.z-ca65 .z-constant,
-.z-ca65 .z-symbol,
-.z-ca65 .z-deleted,
-.language-ca65 .z-property,
-.language-ca65 .z-tag,
-.language-ca65 .z-constant,
-.language-ca65 .z-symbol,
-.language-ca65 .z-deleted {
-  color: #f92672;
-}
-
-.z-ca65 .z-boolean,
-.z-ca65 .z-number,
-.z-ca65 .z-constant,
-.z-ca65 .z-numeric,
-.language-ca65 .z-boolean,
-.language-ca65 .z-number,
-.language-ca65 .z-constant,
-.language-ca65 .z-numeric {
-  color: #9c6cff;
-}
-
-.z-ca65 .z-selector,
-.z-ca65 .z-attr-name,
-.z-ca65 .z-string,
-.z-ca65 .z-char,
-.z-ca65 .z-builtin,
-.z-ca65 .z-inserted,
-.language-ca65 .z-selector,
-.language-ca65 .z-attr-name,
-.language-ca65 .z-string,
-.language-ca65 .z-char,
-.language-ca65 .z-builtin,
-.language-ca65 .z-inserted {
-  color: #54ce28;
-}
-
-.z-ca65 .z-operator,
-.z-ca65 .z-url,
-.language-css .z-string,
-.z-style .z-string,
-.z-ca65 .z-variable,
-.language-ca65 .z-operator,
-.language-ca65 .z-url,
-.language-ca65 .z-variable {
-  color: #f8f8f2;
-}
-
-.z-ca65 .z-atrule,
-.z-ca65 .z-attr-value,
-.z-ca65 .z-class-name {
-  color: #e6db74;
-}
-
-.z-ca65 .z-keyword,
-.z-ca65 .z-opcode,
-.language-ca65 .z-keyword,
-.language-ca65 .z-opcode {
-  color: #5bbdfe;
-}
-
-.z-ca65 .z-regex,
-.z-ca65 .z-important,
-.language-ca65 .z-regex,
-.language-ca65 .z-important {
-  color: #fd971f;
-}
-
 .important,
 .bold {
   font-weight: bold;
 }
 .italic {
   font-style: italic;
-}
-
-.label,
-.z-ca65,
-code.language-ca65 {
-  color: #c34d00;
 }
 
 pre[data-line] {
@@ -807,29 +800,29 @@ pre[data-line] {
   white-space: pre;
 }
 
-  .line-highlight:before,
-  .line-highlight[data-end]:after {
-    content: attr(data-start);
-    position: absolute;
-    top: .4em;
-    left: .6em;
-    min-width: 1em;
-    padding: 0 .5em;
-    background-color: hsla(24, 20%, 50%,.4);
-    color: hsl(24, 20%, 95%);
-    font: bold 65%/1.5 sans-serif;
-    text-align: center;
-    vertical-align: .3em;
-    border-radius: 999px;
-    text-shadow: none;
-    box-shadow: 0 1px white;
-  }
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
 
-  .line-highlight[data-end]:after {
-    content: attr(data-end);
-    top: auto;
-    bottom: .4em;
-  }
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
 
 .line-numbers .line-highlight:before,
 .line-numbers .line-highlight:after {
@@ -865,19 +858,24 @@ pre[class*="language-"].line-numbers > code {
 
 }
 
-  .line-numbers-rows > span {
-    pointer-events: none;
-    display: block;
-    counter-increment: linenumber;
-  }
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
 
-    .line-numbers-rows > span:before {
-      content: counter(linenumber);
-      color: #999;
-      display: block;
-      padding-right: 0.8em;
-      text-align: right;
-    }
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+pre table td:nth-of-type(1) {
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 div.code-toolbar {
   position: relative;

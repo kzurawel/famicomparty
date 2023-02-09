@@ -161,7 +161,7 @@ handler the next instruction to be executed. Then it works its way through the r
 handler, instruction by instruction.
 {% end %}
 
-### The Reset Handler>
+### The Reset Handler
 
 While the test project doesn't make use of the NMI or IRQ events, it does need a reset
 handler. The reset handler's job is to set up the system when it is first turned on,
