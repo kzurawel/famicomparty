@@ -35,6 +35,7 @@ page_template = "book-page.html"
 ### Part III: Gameplay
 
 - [16. Controller Input](@/book/16-input/index.md)
+- [17. Object Pools](@/book/17-objectpools/index.md)
 
 ### Want to be notified when new chapters are published?
 

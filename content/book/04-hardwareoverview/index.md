@@ -64,7 +64,7 @@ large chips. The left-side chip is labelled "PRG", and the right-side chip is la
 PRG-ROM is "program ROM", and it contains all of the game's code (machine code). CHR-ROM is
 "character ROM", which holds all of the game's graphics data.{% sidenote(id="additional-chips") %}
 There are two additional chips on this board. To the right of the two main ROMs is the "CIC"
-(Checking Integrated Circuit) or ["lockout"](https://en.wikipedia.org/wiki/CIC_(Nintendo\)) chip,
+(Checking Integrated Circuit) or "[lockout](https://en.wikipedia.org/wiki/CIC_\(Nintendo\))" chip,
 an attempt to ensure that only Nintendo-produced cartridges would work in an NES. (The CIC chip is also the reason
 why your NES games often flicker repeatedly until you take them out and put them back in,
 hopefully _without_ blowing on the contacts first.) Under the two ROM chips is the "MMC1",
