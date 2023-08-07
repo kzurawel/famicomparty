@@ -144,7 +144,7 @@ Install WINE via your distribution's package manager, then run NEXXT.exe with it
 Newer Mac versions (starting with Catalina) are 64-bit only, and 32-bit software will not run
 even in a standard WINE install. Thankfully, 32-bit Windows programs can be run using the
 "Crossover" version of WINE, which is able to translate 32-bit code into 64-bit code
-on the fly. Install Crossover via Homebrew (`brew install wine-crossover --no-quarantine`).
+on the fly. Install Crossover via Homebrew (`brew install --cask gcenx/wine/wine-crossover --no-quarantine`).
 Download NEXXT as above and unzip, then run `wine64 ./NEXXT.exe` in the directory where
 you unzipped it.
 
@@ -194,6 +194,9 @@ code into the file:
 vblankwait:
   BIT $2002
   BPL vblankwait
+vblankwait2:
+  BIT $2002
+  BPL vblankwait2
   JMP main
 .endproc
 

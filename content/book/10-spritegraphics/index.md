@@ -247,7 +247,7 @@ But where do our sprite graphics come from? As mentioned in the
 last chapter, the CHR-ROM chip in a cartridge holds two pattern
 tables, one for sprites and one for backgrounds. We will need to
 create our own pattern tables to display sprites on screen. This
-is where NES Lightbox comes in handy.
+is where NEXXT comes in handy.
 
 ## Using NEXXT
 
@@ -307,7 +307,7 @@ of the pattern table display.
 To help you get started, I have created a starter .chr file that features
 some basic sprites and a full font in the background table. Download
 <a href="https://famicom.party/book/projects/10-spritegraphics/src/graphics.chr">graphics.chr</a>
-and open it in NES Lightbox ("Tilesets" &rarr; "Open CHR..." &rarr; select graphics.chr).
+and open it in NEXXT ("Tilesets" &rarr; "Open CHR..." &rarr; select graphics.chr).
 
 To edit or create tiles, click on the space in the pattern table
 display for the tile you wish to alter, then click the "CHR editor" button. This will
