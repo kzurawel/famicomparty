@@ -206,7 +206,7 @@ the screen as an instant death.
 For our space shooter project, we will use a vertical layout
 with an auto-scrolling camera. To make our backgrounds more
 interesting, I've created some additional graphics tiles and
-put them into a new .chr file (`scrolling.chr`).
+put them into a [new .chr file](https://famicom.party/book/projects/15-scrolling/src/scrolling.chr).
 
 {% figure(img="scrollingchr.png") %}
 The new background tiles in `scrolling.chr`.
